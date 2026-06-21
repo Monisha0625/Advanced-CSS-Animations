@@ -13,7 +13,7 @@ body{
     width:90%;
     margin:20px auto;
     border:1px solid #000;
-    min-height:100vh;
+    min-height:120vh;
 }
 
 nav{
@@ -109,7 +109,11 @@ nav ul li a{
 .right img{
     width:450px;
     max-width:100%;
-    animation:squareMove 5s ease-in-out infinite;
+    transition:0.3s;
+}
+
+.right img:hover{
+    animation:squareMove 2s linear infinite;
 }
 
 @keyframes squareMove{
@@ -136,10 +140,6 @@ nav ul li a{
 
 }
 
-li a:hover{
-    text-decoration:underline;
-}
-
 .resume-btn:hover{
     opacity:0.8;
 }
@@ -148,50 +148,3 @@ li a:hover{
     background:#7b1fa2;
 }
 
-@media(max-width:768px){
-
-    nav{
-        text-align:center;
-    }
-
-    .logo,
-    nav ul,
-    .resume-btn{
-        display:block;
-        width:100%;
-        margin-bottom:15px;
-    }
-
-    nav ul li{
-        display:block;
-        margin:10px 0;
-    }
-
-    .left,
-    .right{
-        display:block;
-        width:100%;
-        text-align:center;
-    }
-
-    .left{
-        padding:50px 20px;
-    }
-
-    .left h1{
-        font-size:40px;
-    }
-
-    .left h2{
-        font-size:35px;
-    }
-
-    .left p{
-        width:100%;
-    }
-
-    .right img{
-        width:280px;
-        margin-top:20px;
-    }
-}
